@@ -46,3 +46,9 @@ details.custom-accordion .content {
   min-width: 300px;
   max-width: 625px;
 }
+
+/* Zweisprachigkeit: nur die aktive Sprache anzeigen */
+html[lang="de"] [lang="en"],
+html[lang="en"] [lang="de"] {
+    display: none;
+}
