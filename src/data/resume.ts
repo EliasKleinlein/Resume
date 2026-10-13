@@ -363,7 +363,6 @@ export const skills: LabeledList[] = [
       { de: "Deutsch (Muttersprache)", en: "German (native)" },
       { de: "Englisch (gut in Wort und Schrift)", en: "English (good, written and spoken)" },
       { de: "Russisch (gut in Wort und Schrift)", en: "Russian (good, written and spoken)" },
-      { de: "Mandarin (Grundkenntnisse)", en: "Mandarin (basic)" },
     ],
   },
   {
