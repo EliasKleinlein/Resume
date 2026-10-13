@@ -14,7 +14,7 @@ export interface LabeledList {
 
 export const profile = {
   name: "Elias Kleinlein",
-  photo: "/Foto_Lebenslauf.png",
+  photo: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Foto_Lebenslauf.png`,
   headline: {
     de: "Staatlich geprüfter Maschinenbautechniker | Software Engineering & AI",
     en: "State-certified Mechanical Engineering Technician | Software Engineering & AI",

@@ -25,3 +25,10 @@ npm run build   # statische Seite im Ordner out/ erzeugen
 npm run lint    # TypeScript-Prüfung
 npm test        # Tests ausführen
 ```
+
+## Veröffentlichung (GitHub Pages)
+
+Bei jedem Push auf `main` baut der Workflow `.github/workflows/deploy.yml` die Seite
+(Typprüfung, Tests, Build) und veröffentlicht sie auf GitHub Pages.
+
+Einmalig nötig: im Repo unter **Settings → Pages → Source** „GitHub Actions“ auswählen.
