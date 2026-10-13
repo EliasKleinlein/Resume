@@ -35,6 +35,9 @@ export const ui = {
   skills: { de: "Weitere Kenntnisse und Interessen", en: "Further skills and interests" },
   toggle: { de: "English", en: "Deutsch" },
   toggleLabel: { de: "Sprache auf Englisch umstellen", en: "Switch language to German" },
+  layoutToBento: { de: "Bento-Layout", en: "Bento layout" },
+  layoutToClassic: { de: "Klassisches Layout", en: "Classic layout" },
+  layoutLabel: { de: "Layout wechseln", en: "Switch layout" },
   rights: { de: "Alle Rechte vorbehalten.", en: "All rights reserved." },
 } satisfies Record<string, Localized>;
 
@@ -356,38 +359,40 @@ export const other: TimelineEntry[] = [
   },
 ];
 
-export const skills: LabeledList[] = [
-  {
-    label: { de: "Sprachen", en: "Languages" },
-    items: [
-      { de: "Deutsch (Muttersprache)", en: "German (native)" },
-      { de: "Englisch (gut in Wort und Schrift)", en: "English (good, written and spoken)" },
-      { de: "Russisch (gut in Wort und Schrift)", en: "Russian (good, written and spoken)" },
-      { de: "Mandarin (Grundkenntnisse)", en: "Mandarin (basic)" },
-    ],
-  },
-  {
-    label: { de: "EDV/IT", en: "Software/IT" },
-    items: [
-      "Creo Parametric 5.0", "Solid Works", "Autodesk Inventor", "Shapr3D", "Cimatron E12",
-      "FluidSIM 5", "SIMATIC S7", "SAP", "Sage", "Microsoft Office", "DISY", "ERS", "Heroes",
-      "ELO", "Personal Dialog", "Alpha Plan",
-    ],
-  },
-  {
-    label: { de: "CNC-Steuerungen", en: "CNC controls" },
-    items: [
-      "Siemens 840D", "Heidenhain Dialog iTNC 530", "Sinumerik 810D / 820D",
-      "Grundig Eltropilot", "Mazatrol M32B",
-    ],
-  },
-  {
-    label: { de: "Interessen", en: "Interests" },
-    items: [
-      { de: "Weiterbildung", en: "Continuing education" },
-      { de: "3D-Druck", en: "3D printing" },
-      { de: "Radfahren", en: "Cycling" },
-      { de: "Wandern", en: "Hiking" },
-    ],
-  },
-];
+export const languages: LabeledList = {
+  label: { de: "Sprachen", en: "Languages" },
+  items: [
+    { de: "Deutsch (Muttersprache)", en: "German (native)" },
+    { de: "Englisch (gut in Wort und Schrift)", en: "English (good, written and spoken)" },
+    { de: "Russisch (gut in Wort und Schrift)", en: "Russian (good, written and spoken)" },
+  ],
+};
+
+export const software: LabeledList = {
+  label: { de: "EDV/IT", en: "Software/IT" },
+  items: [
+    "Creo Parametric 5.0", "Solid Works", "Autodesk Inventor", "Shapr3D", "Cimatron E12",
+    "FluidSIM 5", "SIMATIC S7", "SAP", "Sage", "Microsoft Office", "DISY", "ERS", "Heroes",
+    "ELO", "Personal Dialog", "Alpha Plan",
+  ],
+};
+
+export const cncControls: LabeledList = {
+  label: { de: "CNC-Steuerungen", en: "CNC controls" },
+  items: [
+    "Siemens 840D", "Heidenhain Dialog iTNC 530", "Sinumerik 810D / 820D",
+    "Grundig Eltropilot", "Mazatrol M32B",
+  ],
+};
+
+export const interests: LabeledList = {
+  label: { de: "Interessen", en: "Interests" },
+  items: [
+    { de: "Weiterbildung", en: "Continuing education" },
+    { de: "3D-Druck", en: "3D printing" },
+    { de: "Radfahren", en: "Cycling" },
+    { de: "Wandern", en: "Hiking" },
+  ],
+};
+
+export const skills: LabeledList[] = [languages, software, cncControls, interests];
