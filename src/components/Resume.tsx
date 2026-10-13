@@ -10,7 +10,7 @@ type Layout = "classic" | "bento";
 
 export function Resume() {
   const [lang, setLang] = useState<Lang>("de");
-  const [layout, setLayout] = useState<Layout>("classic");
+  const [layout, setLayout] = useState<Layout>("bento");
 
   useEffect(() => {
     document.documentElement.lang = lang;

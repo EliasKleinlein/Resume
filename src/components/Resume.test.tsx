@@ -5,10 +5,10 @@ import { Resume } from "./Resume";
 afterEach(cleanup);
 
 describe("Resume", () => {
-  it("startet auf Deutsch im klassischen Layout", () => {
+  it("startet auf Deutsch im Bento-Layout", () => {
     render(<Resume />);
     expect(screen.getByRole("heading", { level: 2, name: "Berufserfahrung" })).toBeDefined();
-    expect(screen.getByRole("button", { name: "Layout wechseln" }).textContent).toBe("Bento-Layout");
+    expect(screen.getByRole("button", { name: "Layout wechseln" }).textContent).toBe("Klassisches Layout");
     expect(document.documentElement.lang).toBe("de");
   });
 
@@ -27,14 +27,16 @@ describe("Resume", () => {
     const { container } = render(<Resume />);
     const toggle = screen.getByRole("button", { name: "Layout wechseln" });
 
-    fireEvent.click(toggle);
     expect(container.querySelector(".bento")).not.toBeNull();
     expect(container.querySelector(".hero")).toBeNull();
-    expect(toggle.textContent).toBe("Klassisches Layout");
-    expect(screen.getByRole("heading", { level: 2, name: "Berufserfahrung" })).toBeDefined();
 
     fireEvent.click(toggle);
     expect(container.querySelector(".bento")).toBeNull();
     expect(container.querySelector(".hero")).not.toBeNull();
+    expect(toggle.textContent).toBe("Bento-Layout");
+    expect(screen.getByRole("heading", { level: 2, name: "Berufserfahrung" })).toBeDefined();
+
+    fireEvent.click(toggle);
+    expect(container.querySelector(".bento")).not.toBeNull();
   });
 });
