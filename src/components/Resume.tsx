@@ -3,14 +3,14 @@
 import { useEffect, useState } from "react";
 import { profile, ui } from "@/data/resume";
 import type { Lang } from "@/lib/i18n";
-import { BentoLayout } from "./BentoLayout";
+import { PortfolioLayout } from "./PortfolioLayout";
 import { ClassicLayout } from "./ClassicLayout";
 
-type Layout = "classic" | "bento";
+type Layout = "classic" | "portfolio";
 
 export function Resume() {
   const [lang, setLang] = useState<Lang>("de");
-  const [layout, setLayout] = useState<Layout>("bento");
+  const [layout, setLayout] = useState<Layout>("portfolio");
 
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -23,9 +23,9 @@ export function Resume() {
           type="button"
           className="toggle"
           aria-label={ui.layoutLabel[lang]}
-          onClick={() => setLayout(layout === "classic" ? "bento" : "classic")}
+          onClick={() => setLayout(layout === "classic" ? "portfolio" : "classic")}
         >
-          {layout === "classic" ? ui.layoutToBento[lang] : ui.layoutToClassic[lang]}
+          {layout === "classic" ? ui.layoutToPortfolio[lang] : ui.layoutToClassic[lang]}
         </button>
         <button
           type="button"
@@ -37,7 +37,7 @@ export function Resume() {
         </button>
       </nav>
 
-      {layout === "classic" ? <ClassicLayout lang={lang} /> : <BentoLayout lang={lang} />}
+      {layout === "classic" ? <ClassicLayout lang={lang} /> : <PortfolioLayout lang={lang} />}
 
       <footer className="footer">
         © 2026 {profile.name}. {ui.rights[lang]}

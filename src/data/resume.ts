@@ -23,6 +23,11 @@ export const profile = {
     de: "Weiterbildung Software Engineering & AI an der WBS Coding School (03.2026 – 03.2027).",
     en: "Software Engineering & AI program at WBS Coding School (03.2026 – 03.2027).",
   } satisfies Localized,
+  about: {
+    de: "Ich habe eine Ausbildung zum Zerspanungsmechaniker abgeschlossen, mehrere Jahre komplexe Teile auf CNC-Fräs- und Drehzentren programmiert und mich zum staatlich geprüften Maschinenbautechniker weitergebildet. Heute lerne ich Software Engineering & AI und verbinde dieses technische Verständnis mit dem Entwickeln von Software.",
+    en: "I completed my training as a cutting machine operator, spent several years programming complex components on CNC milling and turning centers, and further trained as a state-certified mechanical engineering technician. Today I am learning Software Engineering & AI and combining that technical background with software development.",
+  } satisfies Localized,
+  links: [{ label: "GitHub", href: "https://github.com/EliasKleinlein" }],
 };
 
 export const ui = {
@@ -35,10 +40,25 @@ export const ui = {
   skills: { de: "Weitere Kenntnisse und Interessen", en: "Further skills and interests" },
   toggle: { de: "English", en: "Deutsch" },
   toggleLabel: { de: "Sprache auf Englisch umstellen", en: "Switch language to German" },
-  layoutToBento: { de: "Bento-Layout", en: "Bento layout" },
+  layoutToPortfolio: { de: "Portfolio-Layout", en: "Portfolio layout" },
   layoutToClassic: { de: "Klassisches Layout", en: "Classic layout" },
   layoutLabel: { de: "Layout wechseln", en: "Switch layout" },
   rights: { de: "Alle Rechte vorbehalten.", en: "All rights reserved." },
+  heroExperience: { de: "Berufserfahrung ansehen", en: "View experience" },
+  heroContact: { de: "Kontakt", en: "Contact" },
+  print: { de: "Lebenslauf drucken", en: "Print résumé" },
+  expertise: { de: "Expertise", en: "Expertise" },
+  expertiseLead: {
+    de: "Technologien, Werkzeuge und Sprachen, mit denen ich arbeite.",
+    en: "Technologies, tools and languages I work with.",
+  },
+  about: { de: "Über mich", en: "About" },
+  further: { de: "Weitere Stationen", en: "Further stations" },
+  contact: { de: "Kontakt", en: "Contact" },
+  contactLead: {
+    de: "Für Rückfragen und Gespräche finden Sie hier die verfügbaren Kontaktwege.",
+    en: "The available ways to get in touch are listed here.",
+  },
 } satisfies Record<string, Localized>;
 
 export const techStack: LabeledList[] = [
